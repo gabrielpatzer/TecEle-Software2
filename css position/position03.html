@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head> <title> Position 03 - cantos </title>
+		<!-- CSS interno ao arquivo -->
+		<style>
+			div{
+				width: 150px;
+				height: 150px;
+				margin: 15px;
+				background-color: #5a5;
+				border: 2px dotted black;
+				}
+			#tl{
+				position: absolute;
+				top:0; left:0;
+				}
+			#tr{
+				position: absolute;
+				top: 0; right: 0;
+				}
+			#bl{
+				position: absolute;
+				bottom: 0; left: 0;
+				}
+			#br{
+				position: absolute;
+				bottom: 0; right: 0;
+				}
+		</style>
+	</head>
+	<body>
+		<!-- 4 divs separados, a ordem deles não importa por todos serem absolutos e filhos diretamente do html -->
+		<div id="tl"></div>
+		<div id="tr"></div>
+		<div id="bl"></div>
+		<div id="br"></div>
+	</body>
+</html>

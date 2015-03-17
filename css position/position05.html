@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head> <title> Position 05 - cabe&ccedil;alho fixo </title>
+		<!-- CSS interno ao arquivo -->
+		<style>
+			#topo{
+				position: fixed;
+				top:0;
+				height: 10vw;
+				width: 100%;
+				background: gray;
+				z-index: 1;
+				}
+			.espacador{
+				width: 19%;
+				display: inline-block;
+				}
+			.caixa{
+				width: 20%;
+				background: green;
+				border: 2px spotted  black;
+				position: relative;
+				display: inline-block;
+				}
+			#caixap{
+				height: 70vw;
+				top: -130vw;
+				}
+			#caixam{
+				height: 140vw;
+				top: -60vw;
+				}
+			#caixag{
+				height: 210vw;
+				top: 10vw;
+				}
+		</style>
+	</head>
+	<body>
+		<!-- ao manter a ordem dos blocos não é preciso ajustar as posições dos elementos -->
+		<div id="topo"></div>
+		<div class="caixa" id="caixap"></div>
+		<div class="espacador"></div>
+		<div class="caixa" id="caixam"></div>
+		<div class="espacador"></div>
+		<div class="caixa" id="caixag"></div>
+	</body>
+</html>
