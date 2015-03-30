@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> FAE - Faculdade Anglicana de Erechim </title>
+		<link rel="stylesheet" href="estilos.css">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// Troca das imagens do banner
+				var banAtual = 1;
+				banner();
+				function banner(){
+					setInterval(trocaBanner, 5000);
+					function trocaBanner(){
+						if (banAtual == 1){
+							banAtual = 2;
+							$(".banner").css("background-image","url(\"./imgs/banner02.jpg\")");
+							}
+						else{
+							$(".banner").css("background-image","url(\"./imgs/banner01.jpg\")");
+							banAtual = 1;
+							}
+						}
+					}
+				
+				// Expansão dos menus 
+				$(".menu li").hover(function(){
+						$(this).children().css("color","#08b69b");
+						$(this).css("background","#fff");
+						$(this).children().css("display","block");
+					},function(){
+						$(this).children().css("color","#fff");
+						$(this).css("background","transparent");
+						$(".menu li ul").css("display","none");
+					});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div class="banner"></div>
+			
+		<header class="centro">
+			<div class="logo"></div>
+			<nav class="menu">
+				  <ul>
+					<li><a href="instituicao">Institui&ccedil;&atilde;o</a></li>
+					<li><a href="vestibular">Vestibular</a></li>
+					<li><a href="graduacao">Gradua&ccedil;&atilde;o</a>
+						<ul style="width:225px;">
+							<li><a href="administracao">Administra&ccedil;&atilde;o</a></li>
+							<li><a href="analise_sistemas">Análise e Desenv. de Sistemas</a></li>
+							<li><a href="ciencias_contabeis">Ci&ecirc;ncias Cont&aacute;beis</a></li>
+							<li><a href="design">Design</a></li>
+							<li><a href="eletronica_industrial">Eletr&ocirc;nica Industrial</a></li>
+							<li><a href="pedagogia">Pedagogia</a></li>
+						</ul>
+					</li>
+					<li><a href="pos_graduacao">P&oacute;s-Gradua&ccedil;&atilde;o</a>
+						<ul style="width:255px;">
+							<li><a href="pos_administracao">Administra&ccedil;&atilde;o</a></li>
+							<li><a href="pos_analise">Gest&atilde;o de TI</a></li>
+							<li><a href="pos_controladoria">Controladoria</a></li>
+							<li><a href="pos_contabilidade_direito_tributario">Contabilidade e Dir Tribut&aacute;rio</a></li>                
+							<li><a href="pos_design">Design</a></li>
+							<li><a href="pos_design_ambientes">Design de Ambientes</a></li>                
+							<li><a href="pos_gestao_rh">Gest&atilde;o Estrat&eacute;gica de RH</a></li>   
+							<li><a href="pos_gestao_coordenacao_escolhar">Gest&atilde;o e Coordena&ccedil;&atilde;o Escolar</a></li>    
+							<li><a href="pos_manutencao_industrial">Gest&atilde;o da Manutenção Industrial</a></li>                             
+							<li><a href="psicopedagogia">Psicopedagogia Institucional e Cl&iacute;nica</a></li>                
+							<li><a href="pos_politicas_educacionais">Políticas Educacionais</a></li>                    
+							<li><a href="pos_marketing">Marketing</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="mostra_cientifica/mostra_cientifica.php">Mostra Cient&iacute;fica</a>        
+					</li><li><a href="revista_fazer">Revista Fazer</a>
+					</li>
+					<li><a href="#">Sistema Web</a>
+					<ul style="width:180px;">
+						<!--<li><a target="_blank" href="http://fae.servehttp.com:8082/pergamum/biblioteca/index.php">Biblioteca</a></li>-->
+						<li><a href="biblioteca">Biblioteca</a></li>        	
+						<li><a target="_blank" href="http://201.55.112.18:8081/corpore.net/Login.aspx ">Sistema Web</a></li>
+						<!--<li><a href="uploads/manual_totus.pdf">Manual Totvs</a></li>-->
+						<li><a href="manuais">Arquivos da Institui&ccedil;&atilde;o</a></li>        	
+					</ul>
+					</li>
+					<li><a href="noticias">Not&iacute;cias</a></li>
+					<li><a href="contato">Contato</a></li>
+				  </ul>
+				</nav>    
+		</header>
+
+
+
+	</body>
+</html>

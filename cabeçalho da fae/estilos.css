@@ -1,0 +1,80 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    outline: 0px none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: none repeat scroll 0% 0% transparent;
+}
+.centro {
+	margin-left:auto;
+	margin-right:auto;
+	}
+a {
+	text-decoration: none;
+	outline: medium none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: none repeat scroll 0% 0% transparent;
+}
+.banner{
+	width:100%; height: 355px;
+	background: url("./imgs/banner01.jpg") no-repeat transparent;
+	position:relative;
+	top:0;
+	}
+.logo {
+	background: url("./imgs/logo.png") no-repeat transparent;
+	width: 255px;
+	height: 149px;
+	margin-left: 40px;
+	position: relative;
+	}
+.menu {
+    position: relative;
+    z-index: 600;
+    height: 66px;
+    width: 960px;
+    display: block;
+    margin: 175px auto 0px;
+    padding: 0px;
+    font: 0.8em "PTBold",Arial,Helvetica,sans-serif;
+    background: url("./imgs/menu-bg.jpg") no-repeat scroll right top transparent;
+    border-radius: 5px;
+}
+.menu a {
+    color: #FFF;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    text-transform: uppercase;
+}
+.menu ul {
+    list-style: outside none none;
+    float: left;
+    margin-left: 20px;
+    padding-top: 10px;
+	}
+.menu li {
+    float: left;
+    margin: 16px 0px 0px 5px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.menu li ul {
+    position: absolute;
+    left: -25px;
+    top: 35px;
+    background: none repeat scroll 0% 0% #20BEA5;
+    padding: 10px;
+    width: auto;
+    display: none;
+}
+header {
+	width:960px;
+	height:300px;
+	position: relative;
+	top: -355px;
+}

@@ -1,24 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<title> Pesquisa aqui, tch&ecirc;! </title>
-		<style>
-			header{float:right;font-family:"Arial",sans-serif;font-size:9pt;}
-			header p{display:inline-block;margin:0 3%;}
-			header div{float:right;spacing:3px 12px; margin:0 5px; background-color:#a0bbff; border-radius:3px;}
-			header img{display:inline-block;}
-			header a:link, header a:visited{color:#000;text-decoration:none;}
-			header a:hover{text-decoration:underline;}
-		</style>
+		<title> Pesquisa, tch&ecirc;! </title>
+		<link rel="stylesheet" href="estilos.css">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// cor do botão apps
+				$('#apps').hover(function(){
+					$("#apps").attr('src','./imgs/appson.png')
+				},
+				function(){
+					$('#apps').attr('src','./imgs/appsoff.png')
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<header>
-			<p><a href="#"> +Voc&ecirc;</a> </p>
-			<p><a href="#"> Gmail</a> </p>
-			<p><a href="#"> Imagens</a> </p>
-			<img src="./imgs/apps.png"></img>
 			<div id="login"> Fazer login </div>
+			<img id="apps" src="./imgs/appsoff.png"></img>
+			<p><a href="#"> Imagens</a> </p>
+			<p><a href="#"> Gmail</a> </p>
+			<p><a href="#"> +Voc&ecirc;</a> </p>
 		</header>
 		
+		<br style="clear:both;"/>
+		
+		<div id="centro">
+		<!--youtube 
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/hdr0oBuE7OY" frameborder="0" allowfullscreen></iframe>
+		-->
+		<!--Código gerado pelo google busca personalizada (google CSE) -->
+			<script>
+			  (function() {
+				var cx = '007621343901028633894:livg_vuo0tk';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+					'//www.google.com/cse/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+			  })();
+			</script>
+			<div class="mid">
+				<img id="logo" src="./imgs/gugologo.png"></img>
+			</div>
+			<gcse:searchbox-only></gcse:searchbox-only>
+		
+		</div>
+		
+		<br style="clear:both;"/>
+		
+		<footer>
+			<p class="l">Publicidade</p>
+			<p class="l">Neg&oacute;cios</p>
+			<p class="l">Sobre</p>
+			<p class="r">Usar Google.com</p>
+			<p class="r">Configura&ccedil;&otilde;es</p>
+			<p class="r">Termos</p>
+			<p class="r">Privacidade</p>
+		</footer>
 	</body>
 </html>
