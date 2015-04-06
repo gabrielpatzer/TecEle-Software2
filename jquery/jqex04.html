@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Javascript Exerc&iacute;cio 04 </title>
+		<style>
+			.texto{
+				text-align:right;
+				width:90%;
+				height:1em;
+				padding:2px;
+				margin:0 auto;
+				border:1px solid #aaa;
+				}
+			.entrada{
+				position: relative;
+				left: 15px;
+				text-align:right;
+				width:90%;
+				}
+			form input{
+				margin: 10px 25px;
+				}
+			button{
+				position: relative;
+				left: 160px;
+				}
+			h3{
+				position: relative;
+				left: 50px;
+				}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$( "button" ).click(function() {
+					var input = Number($('#entrada').val());
+					var output=0;
+					if ( $.isNumeric( input ) ){
+						if ($(':checked').val() == "ctof"){
+							output = input*9/5+32;
+							}
+						else if ($(':checked').val() == 'ftoc'){
+							output = (input-32)*5/9;
+							}
+						else if ($(':checked').val() == 'ktof'){
+							output = (input-273)*9/5+32;
+							}
+						else if ($(':checked').val() == 'ftok'){
+							output = (input-32)/9*5+273;
+							}
+						else if ($(':checked').val() == 'ktoc'){
+							output = input-273;
+							}
+						else if ($(':checked').val() == 'ctok'){
+							output = input+273;
+							}
+						$('#saida').text(output);
+						}
+					else {
+						alert("Insira um numero valido!");
+						$('#entrada').val("");
+						$('#saida').text("");
+						}
+				});
+			});
+		</script>
+	</head>
+	<body style="width:400px;margin:0 auto;">
+		<h3> Entrada</h3>
+		<input class="entrada" id="entrada" placeholder="0"></input>
+		<form>
+			<input type="radio" value="ctof" name="tipo" id="ctof" checked> &#186;C => &#186;F </input>
+			<input type="radio" value="ctok" name="tipo" id="ctok" > &#186;C => K </input>
+			<input type="radio" value="ftok" name="tipo" id="ftok" > &#186;F => K </input>
+			<input type="radio" value="ftoc" name="tipo" id="ftoc" > &#186;F => &#186;C </input>
+			<input type="radio" value="ktoc" name="tipo" id="ktoc" > K => &#186;C </input>
+			<input type="radio" value="ktof" name="tipo" id="ktof" > K => &#186;F </input>
+		</form>
+		<br>
+		<button id="conv">Converter</button>
+		<h3> Resultado</h3>
+		<p id="saida" class="texto"> </p>
+	</body>
+<html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Javascript Exerc&iacute;cios 03 </title>
+		<style>
+			#texto{
+				float:left;
+				width:50%;
+				border: 1px solid black;
+				}
+			#formato{
+				padding: 20px;
+				float:right;
+				width:45%;
+				border: 1px solid black;
+				}
+			.titulo{
+				margin:0 auto;
+				background:white;
+				position:absolute;
+				top:-1em;
+				left:50%;
+				}
+			.seletor{
+				width:30px;
+				height:30px;
+				margin: 5px;
+				display: inline-block;
+				}
+			#vermelho{ background: red;}
+			#azul{ background: blue;}
+			#amarelo{ background: yellow;}
+			#verde{ background: green;}
+			
+		</style>
+	</head>
+	<body>
+		<div id="texto">
+			<p class="titulo"> Texto </p>
+			<input placeholder="Digite um texto"></input>
+			<button id="antes">Antes</button>
+			<button id="depois">Depois</button>
+			<ul></ul>
+		</div>
+		<div id="formato">
+			<p class="titulo"> Formato </p>
+			
+			<h3> Cor do texto </h3>
+			<div class="seletor" id="vermelho"></div>
+			<div class="seletor" id="azul"></div>
+			<div class="seletor" id="amarelo"></div>
+			<div class="seletor" id="verde"></div>
+			
+			<h3> Tamanho do texto </h3>
+			<button id="up">+</button>
+			<button id="down">-</button>
+			
+			<h3> Decora&ccedil;&atilde;o do texto </h3>
+			<button id="negrito">N</button>
+			<button id="italico">I</button>
+			<button id="sublinhado">S</button>
+			
+		</div>
+	</body>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// Inserção do texto
+			$('input').focus();
+			$("#depois").click(function() {
+				$("ul").append("<li>"+$('input').val()+"</li>");
+				$('input').val("");
+				$('input').focus();
+			});
+			$('input').keypress(function(event){
+				if (event.which == 13){
+					$("ul").append("<li>"+$('input').val()+"</li>");
+					$('input').val("");
+				}
+			});
+			$("#antes").click(function() {
+				$("ul").prepend("<li>"+$('input').val()+"</li>");
+				$('input').val("");
+				$('input').focus();
+			});
+			
+			// Cor do texto
+			$("#vermelho").click(function(){
+				$("li").css("color","red");
+			});
+			$("#amarelo").click(function(){
+				$("li").css("color","yellow");
+			});
+			$("#azul").click(function(){
+				$("li").css("color","blue");
+			});
+			$("#verde").click(function(){
+				$("li").css("color","green");
+			});
+			
+			// Tamanho do texto
+			$("#up").click(function(){
+				$('li').css("font-size","+=2pt");
+			});
+			$("#down").click(function(){
+				$('li').css("font-size","-=2pt");
+			});
+			
+			//Decoração da fonte
+			// 700 = bold, 400 = normal
+			$('#negrito').click(function(){
+				if ( $('li').css('font-weight') == '700' )
+					$('li').css('font-weight','400');
+				else $('li').css('font-weight','700');
+			});
+			$('#italico').click(function(){
+				if ( $('li').css('font-style') == 'italic' )
+					$('li').css('font-style','normal');
+				else $('li').css('font-style','italic');
+			});
+			$('#sublinhado').click(function(){
+				if ( $('li').css('text-decoration') == 'underline' )
+					$('li').css('text-decoration','none');
+				else $('li').css('text-decoration','underline');
+			});
+			
+			// Destaque da linha
+			$('div li').on('enter',function(){
+				//alert($(this).css('background-color');
+				$(this).css('background-color','#ffff00');
+				//alert($(this).css('background-color');
+			});
+		});
+	</script>
+<html>

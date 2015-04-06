@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Javascript Exerc&iacute;cios 03 </title>
+	</head>
+	<body>
+		<input placeholder="Digite um texto"></input>
+		<button id="antes">Antes</button>
+		<button id="depois">Depois</button>
+		<ul></ul>
+	</body>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('input').focus();
+			$("#depois").click(function() {
+				$("ul").append("<li>"+$('input').val()+"</li>");
+				$('input').val("");
+				$('input').focus();
+			});
+			$('input').keypress(function(event){
+				if (event.which == 13){
+					$("ul").append("<li>"+$('input').val()+"</li>");
+					$('input').val("");
+				}
+			});
+			$("#antes").click(function() {
+				$("ul").prepend("<li>"+$('input').val()+"</li>");
+				$('input').val("");
+				$('input').focus();
+			});
+		});
+	</script>
+<html>
